@@ -26,9 +26,9 @@ class Trainer:
             gpu_id: int, 
             is_ddp_training: bool = True, 
             output_dir: str = 'checkpoints/',  
-            num_epochs: int = 5, 
-            max_length: int = 512, 
-            batch_size: int = 2,
+            num_epochs: int = 10, 
+            max_length: int = 128, 
+            batch_size: int = 8,
             mixed_precision_dtype =  None,
             gradient_accumulation_steps: int = 16):
         """
@@ -283,9 +283,9 @@ if __name__ == "__main__":
         download_from_driver(path= DRIVER_DATA_PATH, location_path= data_path)
 
     size_valid_set = 0.1
-    max_length = 128
-    num_epochs = 10
-    batch_size = 4
+    max_length = 512
+    num_epochs = 5
+    batch_size = 1
     gradient_accumulation_steps = 16
 
     learning_rate = 3e-4
