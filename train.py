@@ -283,9 +283,9 @@ if __name__ == "__main__":
         download_from_driver(path= DRIVER_DATA_PATH, location_path= data_path)
 
     size_valid_set = 0.1
-    max_length = 512
+    max_length = 128
     num_epochs = 5
-    batch_size = 1
+    batch_size = 4
     gradient_accumulation_steps = 16
 
     learning_rate = 3e-4
