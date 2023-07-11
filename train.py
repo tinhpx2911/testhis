@@ -275,7 +275,7 @@ if __name__ == "__main__":
     DRIVER_DATA_PATH = 'https://drive.google.com/file/d/1XmcopF3r2vqm5mdRqKUIYfjfAJfaemd9/view?usp=sharing'
 
     backend = "nccl"
-    model_path = 'lmsys/vicuna-7b-v1.3'
+    model_path = 'vilm/vietcuna-3b'
     if os.environ.get("DEBUG"):
         data_path = 'test_data.json'
     else:
