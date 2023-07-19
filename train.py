@@ -282,7 +282,7 @@ if __name__ == "__main__":
         data_path = 'literature.json'
         download_from_driver(path= DRIVER_DATA_PATH, location_path= data_path)
 
-    size_valid_set = 0.01
+    size_valid_set = 0.1
     max_length = 256
     num_epochs = 30
     batch_size = 2
