@@ -282,8 +282,8 @@ if __name__ == "__main__":
         data_path = 'literature.json'
         download_from_driver(path= DRIVER_DATA_PATH, location_path= data_path)
 
-    size_valid_set = 0.1
-    max_length = 256
+    size_valid_set = 0.05
+    max_length = 512
     num_epochs = 10
     batch_size = 2
     gradient_accumulation_steps = 16
