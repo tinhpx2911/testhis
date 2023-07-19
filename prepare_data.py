@@ -32,7 +32,6 @@ def create_datasets(data_path, size_valid_set, tokenizer, max_length, seed):
     def generate_and_tokenize_prompt(data_point):
         full_prompt = prompter.generate_prompt(
             data_point["instruction"],
-            data_point["input"],
             data_point["output"],
         )
         tokenized_full_prompt = tokenize(full_prompt)
@@ -51,8 +50,8 @@ def create_datasets(data_path, size_valid_set, tokenizer, max_length, seed):
     train_data.set_format("torch")
     valid_data.set_format("torch")
     
-    train_data = train_data.remove_columns(['instruction', 'input', 'output'])
-    valid_data = valid_data.remove_columns(['instruction', 'input', 'output'])
+    train_data = train_data.remove_columns(['instruction', 'output'])
+    valid_data = valid_data.remove_columns(['instruction', 'output'])
 
     dataset["test"].to_json('dataset/val_data.json')
     
