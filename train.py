@@ -272,20 +272,20 @@ def load_pretrained_model(local_rank, model_path: str = ""):
 
 if __name__ == "__main__":
     OUTPUT_DIR = "./"
-    DRIVER_DATA_PATH = 'https://drive.google.com/file/d/1XmcopF3r2vqm5mdRqKUIYfjfAJfaemd9/view?usp=sharing'
+    DRIVER_DATA_PATH = 'https://drive.google.com/file/d/1rNCKlSQnS1KuAKv9glirceDgwZyf9buw/view?usp=sharing'
 
     backend = "nccl"
-    model_path = 'vilm/vietcuna-3b'
+    model_path = 'bigscience/bloom-1b7'
     if os.environ.get("DEBUG"):
         data_path = 'test_data.json'
     else:
-        data_path = 'history-v1.1.2.json'
+        data_path = 'literature.json'
         download_from_driver(path= DRIVER_DATA_PATH, location_path= data_path)
 
     size_valid_set = 0.1
     max_length = 128
-    num_epochs = 5
-    batch_size = 1
+    num_epochs = 10
+    batch_size = 4
     gradient_accumulation_steps = 16
 
     learning_rate = 3e-4
