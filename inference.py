@@ -19,12 +19,12 @@ def get_response(prompt, tokenizer, model, generation_config, max_new_tokens):
 
 def generate_inference(instruction: str, user_inp: str, model_path:str, lora_weights_path:str):
     
-    top_k=64
-    top_p=256
+    top_k=40
+    top_p=128
     temperature=0.1
     load_8bit=True
     num_beams =1
-    max_new_tokens =256
+    max_new_tokens =128
 
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     
