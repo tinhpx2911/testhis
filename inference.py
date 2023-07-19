@@ -24,7 +24,7 @@ def generate_inference(instruction: str, user_inp: str, model_path:str, lora_wei
     temperature=0.1
     load_8bit=True
     num_beams =1
-    max_new_tokens =128
+    max_new_tokens =256
 
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     
