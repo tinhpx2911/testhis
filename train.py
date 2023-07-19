@@ -163,12 +163,12 @@ class Trainer:
         data_trainloader = torch.utils.data.DataLoader(train_dataset, 
                                                        batch_size=self.batch_size, 
                                                        sampler=torch.utils.data.distributed.DistributedSampler(train_dataset) if self.is_ddp_training else None,
-                                                       collate_fn=DataCollatorForSeq2Seq(tokenizer=self.tokenizer, padding=True, pad_to_multiple=8, return_tensors="pt")) 
+                                                       collate_fn=DataCollatorForSeq2Seq(tokenizer=self.tokenizer, padding=True, return_tensors="pt")) 
         # Prepare eval data
         data_evalloader = torch.utils.data.DataLoader(eval_dataset, 
                                                       batch_size=self.batch_size, 
                                                       sampler=torch.utils.data.SequentialSampler(eval_dataset),
-                                                      collate_fn=DataCollatorForSeq2Seq(tokenizer=self.tokenizer, padding=True, pad_to_multiple=8, return_tensors="pt")) 
+                                                      collate_fn=DataCollatorForSeq2Seq(tokenizer=self.tokenizer, padding=True, return_tensors="pt")) 
         
         return data_trainloader, data_evalloader
     
