@@ -288,14 +288,14 @@ if __name__ == "__main__":
     batch_size = 2
     gradient_accumulation_steps = 16
 
-    learning_rate = 3e-4
+    learning_rate = 2e-5
     lr_scheduler_type = 'cosine'
     num_warmup_steps = 100
     weight_decay = 0.06
 
     seed = 0
     log_freq = 1
-    eval_freq = 150
+    eval_freq = 50
     
     # Choose strategy
     distributed_strategy = "ddp" 
