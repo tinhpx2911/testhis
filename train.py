@@ -272,7 +272,7 @@ def load_pretrained_model(local_rank, model_path: str = ""):
 
 if __name__ == "__main__":
     OUTPUT_DIR = "./"
-    DRIVER_DATA_PATH = 'https://drive.google.com/file/d/1rNCKlSQnS1KuAKv9glirceDgwZyf9buw/view?usp=drive_link'
+    DRIVER_DATA_PATH = 'https://drive.google.com/file/d/17CzNi66yHJyM6YYsIwJMHgMGa--Tj5rm/view?usp=sharing'
 
     backend = "nccl"
     model_path = 'bigscience/bloomz-1b7'
@@ -288,7 +288,7 @@ if __name__ == "__main__":
     batch_size = 2
     gradient_accumulation_steps = 16
 
-    learning_rate = 2e-5
+    learning_rate = 2e-4
     lr_scheduler_type = 'cosine'
     num_warmup_steps = 100
     weight_decay = 0.06
