@@ -272,7 +272,7 @@ def load_pretrained_model(local_rank, model_path: str = ""):
 
 if __name__ == "__main__":
     OUTPUT_DIR = "./checkpoints"
-    DRIVER_DATA_PATH = 'https://drive.google.com/file/d/1XOycop0twe3DBOiZHtwgqS3ZmN2WknGV/view?usp=sharing'
+    DRIVER_DATA_PATH = 'https://drive.google.com/file/d/1XOycop0twe3DBOiZHtwgqS3ZmN2WknGV/view?usp=drive_link'
 
     backend = "nccl"
     model_path = 'bigscience/bloomz-1b7'
