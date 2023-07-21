@@ -284,7 +284,7 @@ if __name__ == "__main__":
 
     size_valid_set = 0.1
     max_length = 256
-    num_epochs = 30
+    num_epochs = 20
     batch_size = 2
     gradient_accumulation_steps = 16
 
