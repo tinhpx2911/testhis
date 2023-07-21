@@ -272,7 +272,7 @@ def load_pretrained_model(local_rank, model_path: str = ""):
 
 if __name__ == "__main__":
     OUTPUT_DIR = "./"
-    DRIVER_DATA_PATH = 'https://drive.google.com/file/d/17CzNi66yHJyM6YYsIwJMHgMGa--Tj5rm/view?usp=sharing'
+    DRIVER_DATA_PATH = 'https://drive.google.com/file/d/13iAVXh7ni03idgcGgxkOju7aNh--eNXQ/view?usp=sharing'
 
     backend = "nccl"
     model_path = 'bigscience/bloomz-1b7'
