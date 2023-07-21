@@ -272,14 +272,14 @@ def load_pretrained_model(local_rank, model_path: str = ""):
 
 if __name__ == "__main__":
     OUTPUT_DIR = "./checkpoints"
-    DRIVER_DATA_PATH = 'https://drive.google.com/file/d/13iAVXh7ni03idgcGgxkOju7aNh--eNXQ/view?usp=sharing'
+    DRIVER_DATA_PATH = 'https://drive.google.com/file/d/1aJ_yKDeOT6WOW-SFSxopp7iqIsr0erta/view?usp=sharing'
 
     backend = "nccl"
     model_path = 'bigscience/bloomz-1b7'
     if os.environ.get("DEBUG"):
         data_path = 'test_data.json'
     else:
-        data_path = 'literature.json'
+        data_path = 'literature_test.json'
         download_from_driver(path= DRIVER_DATA_PATH, location_path= data_path)
 
     size_valid_set = 0.1
